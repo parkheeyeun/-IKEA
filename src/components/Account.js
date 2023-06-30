@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Account() {
     return (
         <>
-            <p className="text-3xl font-semibold text-center pt-24 max-w-xl mx-auto">
+            <p className="text-3xl font-semibold text-center pt-20 max-w-xl mx-auto">
                 IKEA에 오신것을 환영합니다</p>
             <div className="flex justify-around mt-16">
                 <Link to="/account/login" className="">

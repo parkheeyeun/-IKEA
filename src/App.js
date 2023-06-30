@@ -6,6 +6,8 @@ import Account from './components/Account';
 import Menu from './components/Menu';
 import NotFound from './components/NotFound';
 import Search from './components/Search';
+import Login from './components/Login';
+import Signup from './components/Signup';
 import './index.css';
 
 export default function App() {
@@ -13,13 +15,15 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home/>}/>
-          <Route path={"/search"} element={<Search />}/>
-          <Route path={"/menu"} element={<Menu />}/>
-          <Route path={"/account"} element={<Account />}/>
-          <Route path={"/cart"} element={<Cart />}/>
+          <Route index element={<Home />} />
+          <Route path={"/search"} element={<Search />} />
+          <Route path={"/menu"} element={<Menu />} />
+          <Route path={"/account"} element={<Account />} />
+          <Route path="/account/login" element={<Login />} />
+          <Route path="/account/signup" element={<Signup />} />
+          <Route path={"/cart"} element={<Cart />} />
         </Route>
-        <Route path="*" element={<NotFound/>}/>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

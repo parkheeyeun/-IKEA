@@ -3,24 +3,26 @@ import { Link, Outlet } from "react-router-dom";
 export default function Layout() {
     return (
         <>
-            <Link to="/">
-                <img
-                    className="inline m-4 w-24 h-26 float-left"
-                    src="/image/logo.png"
-                    alt="logo"
-                />
-            </Link>
-            <Link to="/search">
-                <svg
-                    className="relative float-right cursor-pointer top-6 right-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 512 512">
-                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+            <div className="flex justify-between">
+                <Link to="/">
+                    <img
+                        className="m-4 w-24 h-26"
+                        src="/image/logo.png"
+                        alt="logo"
                     />
-                </svg>
-            </Link>
+                </Link>
+                <Link to="/search">
+                    <svg
+                        className="relative cursor-pointer top-4 right-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 512 512">
+                        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                        />
+                    </svg>
+                </Link>
+            </div>
 
             <nav className="fixed bottom-0 left-0 w-full z-10 bg-[#f7f3ec] h-14 border-t border">
                 <div className="flex justify-around items-center h-full mx-4">
