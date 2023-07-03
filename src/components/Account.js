@@ -1,6 +1,12 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Account() {
+
+    useEffect(() => {
+        document.title = "계정 관리"
+    })
+
     return (
         <>
             <p className="text-3xl font-semibold text-center pt-20 max-w-xl mx-auto">
