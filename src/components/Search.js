@@ -2,25 +2,33 @@ import { useState, useEffect, useRef } from "react";
 
 export default function Search() {
     const [error, setError] = useState(null)
+    const [isLoaded, setIsLoaded] = useState(true)
     const [product, setProduct] = useState([])
+    const inputEl = useRef(null)
 
     console.log(product)
 
     async function handleChange(e) {
-        try{
+        try {
             const goods = e.target.value
 
-            if(!goods){
+            if (!goods) {
                 return setProduct([])
             }
 
-        }catch(error){
+            setError(null)
+            setIsLoaded(false)
+
+            // const { product } = await getGoods(goods)
+
+        } catch (error) {
             setError(error)
         }
     }
 
     useEffect(() => {
         document.title = "검색"
+        inputEl.current.focus()
     })
 
     return (
@@ -29,6 +37,8 @@ export default function Search() {
                 <input
                     type="text"
                     className="w-full bg-transparent border-2 border-[#2360a5] py-4 px-4 rounded-full outline-none"
+                    onChange={handleChange}
+                    ref={inputEl}
                 />
                 <svg
                     className="absolute cursor-pointer right-8 top-3"
