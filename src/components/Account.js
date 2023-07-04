@@ -5,7 +5,7 @@ export default function Account() {
 
     useEffect(() => {
         document.title = "계정 관리"
-    })
+    },[])
 
     return (
         <>
