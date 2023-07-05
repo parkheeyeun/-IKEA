@@ -3,10 +3,13 @@ import './index.css'
 
 export default function Home() {
 
-  const Item = {
-    id: 1,
-    title: "KLEPPSTAD 클렙스타드"
-  }
+  const Item = [
+    {id: 1, title: "KLEPPSTAD 클렙스타드"},
+    {id: 2, title: "가구입니다"}
+  ]
+
+  const currentId = Item.map(item => item.id)
+  console.log(currentId)
 
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart") || "[]"))
 
