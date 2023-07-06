@@ -31,17 +31,17 @@ function Like() {
 export default function Home() {
 
     const Item = [
-        { id: 1, title: "KLEPPSTAD 클렙스타드", price: "￦189000", src: "https://www.ikea.com/kr/ko/images/products/kleppstad-wardrobe-with-3-doors-white__0753594_pe748782_s5.jpg?f=s" },
-        { id: 2, title: "LINNMON 린몬 / ADILS 아딜스", price: "￦45000", src: "https://www.ikea.com/kr/ko/images/products/linnmon-adils-table-white__0737165_pe740925_s5.jpg?f=xxs" },
-        { id: 3, title: "RÅSKOG 로스코그", price: "￦39900", src: "https://www.ikea.com/kr/ko/images/products/utespelare-gaming-desk-black__0985179_pe816538_s5.jpg?f=s" },
-        { id: 4, title: "UTESPELARE 우테스펠라레", price: "￦169000", src: "https://www.ikea.com/kr/ko/images/products/raskog-trolley-white__0503386_pe632627_s5.jpg?f=s" },
-        { id: 5, title: "DJUNGELSKOG 융엘스코그", price: "￦12900", src: "https://www.ikea.com/kr/ko/images/products/djungelskog-soft-toy-orangutan__0710167_pe727369_s5.jpg?f=s" }
+        { id: 1, title: "KLEPPSTAD 클렙스타드", price: "￦189000", count: 0, src: "https://www.ikea.com/kr/ko/images/products/kleppstad-wardrobe-with-3-doors-white__0753594_pe748782_s5.jpg?f=s" },
+        { id: 2, title: "LINNMON 린몬 / ADILS 아딜스", price: "￦45000", count: 0, src: "https://www.ikea.com/kr/ko/images/products/linnmon-adils-table-white__0737165_pe740925_s5.jpg?f=xxs" },
+        { id: 3, title: "RÅSKOG 로스코그", price: "￦39900", count: 0, src: "https://www.ikea.com/kr/ko/images/products/utespelare-gaming-desk-black__0985179_pe816538_s5.jpg?f=s" },
+        { id: 4, title: "UTESPELARE 우테스펠라레", price: "￦169000", count: 0, src: "https://www.ikea.com/kr/ko/images/products/raskog-trolley-white__0503386_pe632627_s5.jpg?f=s" },
+        { id: 5, title: "DJUNGELSKOG 융엘스코그", price: "￦12900", count: 0, src: "https://www.ikea.com/kr/ko/images/products/djungelskog-soft-toy-orangutan__0710167_pe727369_s5.jpg?f=s" }
     ]
 
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart") || "[]"))
 
-    function addCart(id,title,src,price) {
-        const updateCart = [...cart, { id,title,src,price }]
+    function addCart(id, title, src, price, count) {
+        const updateCart = [...cart, { id, title, src, price,count }]
         localStorage.setItem("cart", JSON.stringify(updateCart))
         setCart(true)
     }
@@ -181,7 +181,7 @@ export default function Home() {
                             <div>
                                 <div className="bg-[#2360a5] rounded-full w-10 h-10 mt-2 mr-4 relative float-left">
                                     <svg
-                                        onClick={() => addCart(item.id, item.title, item.src, item.price)}
+                                        onClick={() => addCart(item.id, item.title, item.src, item.price, item.count)}
                                         className="fill-white w-6 h-6 absolute left-2 top-2 cursor-pointer"
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 16 16">
