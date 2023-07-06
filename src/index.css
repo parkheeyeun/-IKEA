@@ -3,28 +3,38 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'ONE-Mobile-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
 }
 
 body{
-  font-family: 'ONE-Mobile-Regular';
-  background: #F9F5EA;
+  font-family: 'Pretendard-Regular';
 }
 
-::-webkit-scrollbar {
-  height: 3px;
-  width: 10px;
+.bounce-animation {
+  animation-name: bounce;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
+<<<<<<< HEAD
 
 ::-webkit-scrollbar-thumb {
   background: black;
 }
 
 
+=======
+>>>>>>> 2bffd4797987cec0386cb99da4feced012f84185
