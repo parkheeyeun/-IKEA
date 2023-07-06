@@ -1,0 +1,37 @@
+import React, { useState } from 'react';
+
+function HeartIcon() {
+  const [liked, setLiked] = useState(false);
+
+  const toggleLike = () => {
+    setLiked(!liked);
+  };
+
+  return (
+    <svg
+      className={`heart-icon ${liked ? 'fill-red' : ''}`}
+      onClick={toggleLike}
+      viewBox="0 0 24 24"
+    >
+      {liked ? (
+        <path
+          d="M12 20.16l-1.44-1.3C5.24 14.46 2 11.08 2 7.5 2 4.42 4.42 2 7.5 2c1.97 0 3.94.95 5 2.5C14.56 2.95 16.53 2 18.5 2 21.58 2 24 4.42 24 7.5c0 3.58-3.24 6.96-8.56 11.36L12 20.16z"
+        />
+      ) : (
+        <path
+          d="M18.5 2A5.5 5.5 0 0 1 24 7.5c0 3.2-2.61 5.79-5.86 9.65l-.14.14c-.3.27-.66.48-1.06.62-.41.15-.83.23-1.24.23-.41 0-.82-.08-1.23-.23-.4-.15-.76-.35-1.06-.62l-.14-.14C2.61 13.29 0 10.7 0 7.5A5.5 5.5 0 0 1 5.5 2c1.67 0 3.22.77 4.25 2.03l.25.28.25-.28A5.48 5.48 0 0 1 18.5 2z"
+        />
+      )}
+    </svg>
+  );
+}
+
+function App() {
+  return (
+    <div className="app">
+      <HeartIcon />
+    </div>
+  );
+}
+
+export default App;
