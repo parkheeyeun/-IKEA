@@ -216,7 +216,7 @@ export default function Signup() {
                     <input
                         type="checkbox"
                         id="check1"
-                        className="w-16 h-16 bg-white border border-black rounded mr-4
+                        className="w-14 h-14 bg-white border border-black rounded mr-4
                             checked:bg-[#2360a5] checked:border-transparent focus:outline-none checked:text-white-600"
                     />
                     <label className="block" for="check1">나의 프로필, 관심사 그리고 구매 이력에 따라 맞춰진 IKEA의 홈퍼니싱 아이디어와
