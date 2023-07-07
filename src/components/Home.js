@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 import './like.css'
 
 function Like() {
@@ -40,8 +41,8 @@ export default function Home() {
 
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart") || "[]"))
 
-    function addCart(id, title, src, price, count) {
-        const updateCart = [...cart, { id, title, src, price,count }]
+    function addCart(id, title, price, count, src) {
+        const updateCart = [...cart, { id, title, price, count, src }]
         localStorage.setItem("cart", JSON.stringify(updateCart))
         setCart(true)
     }
@@ -95,13 +96,15 @@ export default function Home() {
                     </div>
 
                     <div className="relative mr-4">
-                        <img
-                            className="h-full max-w-fit"
-                            src="https://www.ikea.com/ext/ingkadam/m/57af553408fd829f/original/PE867858-crop001.jpg?f=xxs"
-                        />
-                        <button className="bg-white rounded-full px-3 py-1 absolute bottom-5 left-20">
-                            <p>수납/정리</p>
-                        </button>
+                        <Link to='/menu/st1'>
+                            <img
+                                className="h-full max-w-fit"
+                                src="https://www.ikea.com/ext/ingkadam/m/57af553408fd829f/original/PE867858-crop001.jpg?f=xxs"
+                            />
+                            <button className="bg-white rounded-full px-3 py-1 absolute bottom-5 left-20">
+                                <p>수납/정리</p>
+                            </button>
+                        </Link>
                     </div>
 
                     <div className="relative mr-4">
@@ -181,7 +184,7 @@ export default function Home() {
                             <div>
                                 <div className="bg-[#2360a5] rounded-full w-10 h-10 mt-2 mr-4 relative float-left">
                                     <svg
-                                        onClick={() => addCart(item.id, item.title, item.src, item.price, item.count)}
+                                        onClick={() => addCart(item.id, item.title, item.price, item.count, item.src)}
                                         className="fill-white w-6 h-6 absolute left-2 top-2 cursor-pointer"
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 16 16">

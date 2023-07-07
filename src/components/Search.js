@@ -43,9 +43,9 @@ const SearchList = ({ product }) => {
 
 export default function Search() {
     const searchListData = [
-       '옷장', '침대', '책상', '의자', '식탁', '선반'
+       '옷장', '침대', '책상', '의자', '식탁', '선반', '수납'
     ]
-
+    
     return (
         <>
             <SearchList product={searchListData}/>
