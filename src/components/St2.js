@@ -76,7 +76,7 @@ export default function St2() {
                         <img
                             className="mr-4"
                             src="https://www.ikea.com/ext/ingkadam/m/3aa0622e7813ecd6/original/PH193635.jpg?f=xl" />
-                        <div className="absolute bottom-28 right-20 w-8 h-8 bg-gray-200 opacity-70 z-10 rounded-full hover:bg-white hover:w-12 h-12 hover:border border-black"><span className="hidden hover:block"></span></div>
+                        <div className="absolute bottom-28 right-20 w-8 h-8 bg-gray-200 opacity-70 z-10 rounded-full hover:bg-white hover:w-12 h-12 hover:border border-black hover:rounded"><span className="hidden hover:block"></span></div>
                     </div>
                     <img
                         src="https://www.ikea.com/ext/ingkadam/m/7b71349df7a829f5/original/PH193636.jpg?f=xl" />
