@@ -46,9 +46,9 @@ function Item({ item }) {
     let total = count > 0 ? price * count : price
 
     function onDelete(id){
-        const updatelist = cart.filter((item) => {
-            return item.id !== id })
+        const updatelist = cart.filter(item => item.id !== id)
         setCart(updatelist)
+        localStorage.setItem("cart",JSON.stringify(updatelist))
     }
 
     return (
@@ -60,7 +60,7 @@ function Item({ item }) {
                         <p className="font-semibold">{item.title}</p>
                         <button
                             className="underline underline-offset-3 mr-4"
-                            onDelete={onDelete}>삭제</button>
+                            onClick={() => onDelete(item.id)}>삭제</button>
                     </div>
                     <p className="text-lg font-semibold mt-2">{item.price}</p>
                     <div className="mt-4">
