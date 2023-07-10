@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import StarCount from "./Star";
 
 const Item = [
     { id: 1, title: "KLEPPSTAD 클렙스타드", price: "￦189000", count: 0, src: "https://www.ikea.com/kr/ko/images/products/kleppstad-wardrobe-with-3-doors-white__0753594_pe748782_s5.jpg?f=s" },
@@ -9,7 +10,7 @@ const Item = [
     { id: 5, title: "DJUNGELSKOG 융엘스코그", price: "￦12900", count: 0, src: "https://www.ikea.com/kr/ko/images/products/djungelskog-soft-toy-orangutan__0710167_pe727369_s5.jpg?f=s" }
 ]
 
-export default function Detail() {
+export default function Menu() {
 
     const { id } = useParams()
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart") || "[]"))
@@ -29,6 +30,7 @@ export default function Detail() {
                     <h1 className="text-2xl font-semibold">{product.title}</h1>
                     <p className="text-lg mt-2">{product.price}</p>
                     <p className="mt-2">상품평</p>
+                    <StarCount/>
                     <button
                         className="bg-[#2360a5] w-24 h-10 py-2 px-4 text-white rounded-full mt-2"
                         onClick={() => addCart(product.id, product.title, product.price, product.count, product.src)}>구매하기</button>
