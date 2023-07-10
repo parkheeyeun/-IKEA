@@ -3,7 +3,7 @@ import Cart from './components/Cart';
 import Home from './components/Home';
 import Layout from './components/Layout';
 import Account from './components/Account';
-import Menu from './components/Menu';
+import Cate from './components/Cate';
 import NotFound from './components/NotFound';
 import Search from './components/Search';
 import Login from './components/Login';
@@ -15,6 +15,7 @@ import St4 from './components/St4';
 import St5 from './components/St5';
 import St6 from './components/St6';
 import './index.css';
+import Menu from './components/Menu';
 
 export default function App() {
   return (
@@ -22,14 +23,15 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="/menu/:id" element={<Menu/>}/>
           <Route path={"/search"} element={<Search />} />
-          <Route path={"/menu"} element={<Menu />} />
-          <Route path={'menu/st1'} element={<St1/>}/>
-          <Route path={'menu/st2'} element={<St2/>}/>
-          <Route path={'menu/st3'} element={<St3/>}/>
-          <Route path={'menu/st4'} element={<St4/>}/>
-          <Route path={'menu/st5'} element={<St5/>}/>
-          <Route path={'menu/st6'} element={<St6/>}/>
+          <Route path={"/cate"} element={<Cate/>} />
+          <Route path={'cate/st1'} element={<St1/>}/>
+          <Route path={'cate/st2'} element={<St2/>}/>
+          <Route path={'cate/st3'} element={<St3/>}/>
+          <Route path={'cate/st4'} element={<St4/>}/>
+          <Route path={'cate/st5'} element={<St5/>}/>
+          <Route path={'cate/st6'} element={<St6/>}/>
           <Route path={"/account"} element={<Account />} />
           <Route path="/account/login" element={<Login />} />
           <Route path="/account/signup" element={<Signup />} />

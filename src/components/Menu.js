@@ -1,67 +1,41 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-export default function Menu() {
+const Item = [
+    { id: 1, title: "KLEPPSTAD 클렙스타드", price: "￦189000", count: 0, src: "https://www.ikea.com/kr/ko/images/products/kleppstad-wardrobe-with-3-doors-white__0753594_pe748782_s5.jpg?f=s" },
+    { id: 2, title: "LINNMON 린몬 / ADILS 아딜스", price: "￦45000", count: 0, src: "https://www.ikea.com/kr/ko/images/products/linnmon-adils-table-white__0737165_pe740925_s5.jpg?f=xxs" },
+    { id: 3, title: "RÅSKOG 로스코그", price: "￦39900", count: 0, src: "https://www.ikea.com/kr/ko/images/products/utespelare-gaming-desk-black__0985179_pe816538_s5.jpg?f=s" },
+    { id: 4, title: "UTESPELARE 우테스펠라레", price: "￦169000", count: 0, src: "https://www.ikea.com/kr/ko/images/products/raskog-trolley-white__0503386_pe632627_s5.jpg?f=s" },
+    { id: 5, title: "DJUNGELSKOG 융엘스코그", price: "￦12900", count: 0, src: "https://www.ikea.com/kr/ko/images/products/djungelskog-soft-toy-orangutan__0710167_pe727369_s5.jpg?f=s" }
+]
 
-    useEffect(() => {
-        document.title = "메뉴"
-    }, [])
+export default function Detail() {
+
+    const { id } = useParams()
+    const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart") || "[]"))
+    const product = Item.find(product => product.id == id)
+
+    function addCart(id, title, price, count, src) {
+        const updateCart = [...cart, { id, title, price, count, src }]
+        localStorage.setItem("cart", JSON.stringify(updateCart))
+        setCart(true)
+    }
 
     return (
         <>
-        <h1 className="text-center text-4xl font-semibold">카테고리</h1>
-            <div className="grid gap-4 w-3/4 m-auto mt-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3">
-                <Link to="/menu/st1">
-                <div className="w-full h-[280px] overflow-hidden">
-                    <img
-                        className="object-cover rounded-t w-full h-full"
-                        src="https://www.ikea.com/images/platsa-ae04386d8804870b67b5c0eea71f0768.jpg?f=m" />
+            <div className="m-4 mt-8 w-2/3 m-auto flex">
+                <img src={product.src} />
+                <div className="flex flex-col ml-4">
+                    <h1 className="text-2xl font-semibold">{product.title}</h1>
+                    <p className="text-lg mt-2">{product.price}</p>
+                    <p className="mt-2">상품평</p>
+                    <button
+                        className="bg-[#2360a5] w-24 h-10 py-2 px-4 text-white rounded-full mt-2"
+                        onClick={() => addCart(product.id, product.title, product.price, product.count, product.src)}>구매하기</button>
+                    <p className="mt-4">간편하고 스마트하죠! 기본 기능에 충실한 옷장이 필요할 때 사용하기 좋아요. 수납이 여전히 부족하다면 KLEPPSTAD 클렙스타드 시리즈의 다른 옷장을 추가해보세요.</p>
                 </div>
-                    <p className="w-full bg-[#ece6cc] h-16 text-lg text-center pt-2">수납/정리</p>
-                </Link>
-                <Link to="/menu/st2">
-                <div className="w-full h-[280px] overflow-hidden">
-                    <img
-                        className="object-cover rounded-t w-full h-full"
-                        src="https://www.ikea.com/ext/ingkadam/m/365b7033ded6e3fd/original/PE842159-crop001.jpg?f=l" />
-                </div>
-                    <p className="w-full bg-[#ece6cc] h-16 text-lg text-center pt-2">침대/매트릭스</p>
-                </Link>
-                <Link to="/menu/st3">
-                <div className="w-full h-[280px] overflow-hidden">
-                    <img
-                        className="object-cover rounded-t w-full h-full"
-                        src="https://www.ikea.com/ext/ingkadam/m/3f0c3505388a117f/original/PH193342-crop001.jpg?f=xs" />
-                </div>
-                    <p className="w-full bg-[#ece6cc] h-16 text-lg text-center pt-2">주방가구</p>
-                </Link>
-                <Link to="/menu/st4">
-                <div className="w-full h-[280px] overflow-hidden">
-                    <img
-                        className="object-cover rounded-t w-full h-full"
-                        src="https://www.ikea.com/ext/ingkadam/m/420032c86818ef16/original/PH172449.jpg?f=xs" />
-                </div>
-                    <p className="w-full bg-[#ece6cc] h-16 text-lg text-center pt-2">욕실</p>
-                </Link>
-                <Link to="/menu/st5">
-                <div className="w-full h-[280px] overflow-hidden">
-                    <img
-                        className="object-cover rounded-t w-full h-full"
-                        src="https://www.ikea.com/images/-05a29f3344522a1008e5ea9f1330e05a.jpg?f=xs" />
-                </div>
-                    <p className="w-full bg-[#ece6cc] h-16 text-lg text-center pt-2">세탁/청소</p>
-                </Link>
-                <Link to="/menu/st6">
-                <div className="w-full h-[280px] overflow-hidden">
-                    <img
-                        className="object-cover rounded-t w-full h-full"
-                        src="https://www.ikea.com/images/bekant-jaervfjaellet-lack-7922294a1df4c37894da8cdac5a1b4ee.jpg?f=xs" />
-                </div>
-                    <p className="w-full bg-[#ece6cc] h-16 text-lg text-center pt-2">홈오피스</p>
-                </Link>
-                <div className="h-20"></div>
             </div>
+            <div className="h-20" />
         </>
     )
-
 }

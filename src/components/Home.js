@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import Scollbtn from './Scrollbtn'
 import './like.css'
 
 function Like() {
@@ -53,6 +54,7 @@ export default function Home() {
 
     return (
         <>
+            <Scollbtn />
             <div className="flex mx-4">
                 <img
                     src="https://www.ikea.com/images/be/24/be241105e72cf8bfb1fcd875f03827fe.jpg?f=xl"
@@ -86,17 +88,19 @@ export default function Home() {
                     </div>
 
                     <div className="relative mr-4">
-                        <img
-                            className="h-full max-w-fit"
-                            src="https://www.ikea.com/ext/ingkadam/m/3aa319771247890b/original/PH171699-crop001.jpg?f=xxs"
-                        />
-                        <button className="bg-white rounded-full px-3 py-1 absolute bottom-5 left-20">
-                            <p>침실</p>
-                        </button>
+                        <Link to='/cate/st2'>
+                            <img
+                                className="h-full max-w-fit"
+                                src="https://www.ikea.com/ext/ingkadam/m/3aa319771247890b/original/PH171699-crop001.jpg?f=xxs"
+                            />
+                            <button className="bg-white rounded-full px-3 py-1 absolute bottom-5 left-20">
+                                <p>침실</p>
+                            </button>
+                        </Link>
                     </div>
 
                     <div className="relative mr-4">
-                        <Link to='/menu/st1'>
+                        <Link to='/cate/st1'>
                             <img
                                 className="h-full max-w-fit"
                                 src="https://www.ikea.com/ext/ingkadam/m/57af553408fd829f/original/PE867858-crop001.jpg?f=xxs"
@@ -175,12 +179,14 @@ export default function Home() {
 
                 <div className="flex mt-8 h-[500px] overflow-auto overflow-y-hidden box-border px-2 py-2 relative">
                     {Item.map(item => (
-                        <li className="list-none mr-3">
-                            <img
-                                className="max-w-[340px]"
-                                src={item.src} />
-                            <p className="font-semibold mt-2">{item.title}</p>
-                            <p className="font-semibold mt-2 text-2xl">{item.price}</p>
+                        <li className="list-none mr-3" key={item.id}>
+                            <Link to={`/menu/${item.id}`}>
+                                <img
+                                    className="max-w-[340px]"
+                                    src={item.src} />
+                                <p className="font-semibold mt-2">{item.title}</p>
+                                <p className="font-semibold mt-2 text-2xl">{item.price}</p>
+                            </Link>
                             <div>
                                 <div className="bg-[#2360a5] rounded-full w-10 h-10 mt-2 mr-4 relative float-left">
                                     <svg
