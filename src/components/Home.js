@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import Scollbtn from './Scrollbtn'
+import Chat from "./Chat"
 import './like.css'
 
 function Like() {
@@ -55,6 +56,7 @@ export default function Home() {
     return (
         <>
             <Scollbtn />
+            <Chat />
             <div className="flex mx-4">
                 <img
                     src="https://www.ikea.com/images/be/24/be241105e72cf8bfb1fcd875f03827fe.jpg?f=xl"
