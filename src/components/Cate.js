@@ -11,7 +11,7 @@ export default function Cate() {
         <>
         <h1 className="text-center text-4xl font-semibold">카테고리</h1>
             <div className="grid gap-4 w-3/4 m-auto mt-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3">
-                <Link to="/menu/st1">
+                <Link to="/IKEA/cate/st1">
                 <div className="w-full h-[280px] overflow-hidden">
                     <img
                         className="object-cover rounded-t w-full h-full"
@@ -19,7 +19,7 @@ export default function Cate() {
                 </div>
                     <p className="w-full bg-[#ece6cc] h-16 text-lg text-center pt-2">수납/정리</p>
                 </Link>
-                <Link to="/menu/st2">
+                <Link to="/IKEA/cate/st2">
                 <div className="w-full h-[280px] overflow-hidden">
                     <img
                         className="object-cover rounded-t w-full h-full"
@@ -27,7 +27,7 @@ export default function Cate() {
                 </div>
                     <p className="w-full bg-[#ece6cc] h-16 text-lg text-center pt-2">침대/매트릭스</p>
                 </Link>
-                <Link to="/menu/st3">
+                <Link to="/IKEA/cate/st3">
                 <div className="w-full h-[280px] overflow-hidden">
                     <img
                         className="object-cover rounded-t w-full h-full"
@@ -35,7 +35,7 @@ export default function Cate() {
                 </div>
                     <p className="w-full bg-[#ece6cc] h-16 text-lg text-center pt-2">주방가구</p>
                 </Link>
-                <Link to="/menu/st4">
+                <Link to="/IKEA/cate/st4">
                 <div className="w-full h-[280px] overflow-hidden">
                     <img
                         className="object-cover rounded-t w-full h-full"
@@ -43,7 +43,7 @@ export default function Cate() {
                 </div>
                     <p className="w-full bg-[#ece6cc] h-16 text-lg text-center pt-2">욕실</p>
                 </Link>
-                <Link to="/menu/st5">
+                <Link to="/IKEA/cate/st5">
                 <div className="w-full h-[280px] overflow-hidden">
                     <img
                         className="object-cover rounded-t w-full h-full"
@@ -51,7 +51,7 @@ export default function Cate() {
                 </div>
                     <p className="w-full bg-[#ece6cc] h-16 text-lg text-center pt-2">세탁/청소</p>
                 </Link>
-                <Link to="/menu/st6">
+                <Link to="/IKEA/cate/st6">
                 <div className="w-full h-[280px] overflow-hidden">
                     <img
                         className="object-cover rounded-t w-full h-full"

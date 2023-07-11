@@ -23,7 +23,7 @@ export default function NotFound() {
                 </svg>
             </div>
             <p className="block text-center text-xl mt-8">
-                <Link to="/" className="text-blue-500">홈으로</Link>
+                <Link to="/IKEA" className="text-blue-500">홈으로</Link>
             </p>
         </div>
     )

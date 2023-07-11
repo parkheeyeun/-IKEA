@@ -21,21 +21,21 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/menu/:id" element={<Menu/>}/>
-          <Route path={"/search"} element={<Search />} />
-          <Route path={"/cate"} element={<Cate/>} />
-          <Route path={'cate/st1'} element={<St1/>}/>
-          <Route path={'cate/st2'} element={<St2/>}/>
-          <Route path={'cate/st3'} element={<St3/>}/>
-          <Route path={'cate/st4'} element={<St4/>}/>
-          <Route path={'cate/st5'} element={<St5/>}/>
-          <Route path={'cate/st6'} element={<St6/>}/>
-          <Route path={"/account"} element={<Account />} />
-          <Route path="/account/login" element={<Login />} />
-          <Route path="/account/signup" element={<Signup />} />
-          <Route path={"/cart"} element={<Cart />} />
+        <Route path="/IKEA" element={<Layout />}>
+          <Route path='/IKEA' element={<Home />} />
+          <Route path="/IKEA/menu/:id" element={<Menu/>}/>
+          <Route path={"/IKEA/search"} element={<Search />} />
+          <Route path={"/IKEA/cate"} element={<Cate/>} />
+          <Route path={'/IKEA/cate/st1'} element={<St1/>}/>
+          <Route path={'/IKEA/cate/st2'} element={<St2/>}/>
+          <Route path={'/IKEA/cate/st3'} element={<St3/>}/>
+          <Route path={'/IKEA/cate/st4'} element={<St4/>}/>
+          <Route path={'/IKEA/cate/st5'} element={<St5/>}/>
+          <Route path={'/IKEA/cate/st6'} element={<St6/>}/>
+          <Route path={"/IKEA/account"} element={<Account />} />
+          <Route path="/IKEA/account/login" element={<Login />} />
+          <Route path="/IKEA/account/signup" element={<Signup />} />
+          <Route path={"/IKEA/cart"} element={<Cart />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

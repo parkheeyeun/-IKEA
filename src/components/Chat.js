@@ -12,7 +12,7 @@ export default function Chat() {
 
     const chatarea = (
         <div
-            className='fixed right-5 bottom-28 z-10 w-96 h-96 rounded-lg bg-white'>
+            className='fixed right-5 bottom-28 z-10 w-80 h-96 rounded-lg bg-white md:w-96'>
             <div className='flex flex-col bg-[#f7d43c] w-full h-14 rounded-t-lg'>
                 <div className='flex justify-between'>
                     <p className='p-3 font-semibold text-lg'>IKEA 채팅에 오신것을 환영합니다!</p>

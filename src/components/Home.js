@@ -60,7 +60,7 @@ export default function Home() {
             <div className="flex mx-4">
                 <img
                     src="https://www.ikea.com/images/be/24/be241105e72cf8bfb1fcd875f03827fe.jpg?f=xl"
-                    className="w-2/3 object-cover"
+                    className="w-1/2 object-cover md:w-2/3"
                 />
                 <div className="bg-[#d93c1f]">
                     <div className="h-full font-semibold text-white lg:text-lg lg:mt-8 max-w-screen-md:flex flex-col text-sm my-4 mx-4">
@@ -90,7 +90,7 @@ export default function Home() {
                     </div>
 
                     <div className="relative mr-4">
-                        <Link to='/cate/st2'>
+                        <Link to='/IKEA/cate/st2'>
                             <img
                                 className="h-full max-w-fit"
                                 src="https://www.ikea.com/ext/ingkadam/m/3aa319771247890b/original/PH171699-crop001.jpg?f=xxs"
@@ -102,7 +102,7 @@ export default function Home() {
                     </div>
 
                     <div className="relative mr-4">
-                        <Link to='/cate/st1'>
+                        <Link to='/IKEA/cate/st1'>
                             <img
                                 className="h-full max-w-fit"
                                 src="https://www.ikea.com/ext/ingkadam/m/57af553408fd829f/original/PE867858-crop001.jpg?f=xxs"

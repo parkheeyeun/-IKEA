@@ -4,14 +4,14 @@ export default function Layout() {
     return (
         <>
             <div className="flex justify-between">
-                <Link to="/">
+                <Link to="/IKEA">
                     <img
                         className="m-4 w-24 h-26"
                         src="https://github.com/parkheeyeun/IKEA/blob/master/public/image/logo.png?raw=true"
                         alt="logo"
                     />
                 </Link>
-                <Link to="/search">
+                <Link to="/IKEA/search">
                     <svg
                         className="relative cursor-pointer top-4 right-4"
                         xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ export default function Layout() {
 
             <nav className="fixed bottom-0 left-0 w-full z-10 bg-[#f7f3ec] h-14 border-t border">
                 <div className="flex justify-around items-center h-full mx-4">
-                    <Link to="/">
+                    <Link to="/IKEA">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
@@ -36,7 +36,7 @@ export default function Layout() {
                         </svg>
                     </Link>
 
-                    <Link to="/search">
+                    <Link to="/IKEA/search">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
@@ -46,7 +46,7 @@ export default function Layout() {
                         </svg>
                     </Link>
 
-                    <Link to="/menu">
+                    <Link to="/IKEA/cate">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
@@ -56,7 +56,7 @@ export default function Layout() {
                         </svg>
                     </Link>
 
-                    <Link to="/account">
+                    <Link to="/IKEA/account">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
@@ -66,7 +66,7 @@ export default function Layout() {
                         </svg>
                     </Link>
 
-                    <Link to="/cart">
+                    <Link to="/IKEA/cart">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
