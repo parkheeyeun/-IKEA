@@ -182,7 +182,7 @@ export default function Home() {
                 <div className="flex mt-8 h-[500px] overflow-auto overflow-y-hidden box-border px-2 py-2 relative">
                     {Item.map(item => (
                         <li className="list-none mr-3" key={item.id}>
-                            <Link to={`/menu/${item.id}`}>
+                            <Link to={`/IKEA/menu/${item.id}`}>
                                 <img
                                     className="max-w-[340px]"
                                     src={item.src} />
