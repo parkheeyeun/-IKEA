@@ -22,19 +22,20 @@ export default function Chat() {
                         &times;
                     </button>
                 </div>
-                <div className='flex flex-col h-[500px] justify-between mt-4 p-2'>
-                    <p>고객지원 도우미 챗봇 Billie 🤖입니다.</p>
-                    <p className='mt-1'>무엇을 도와 드릴까요?</p>
+                <div className='flex flex-col h-52 justify-between mt-4 p-2'>
+                    <p className='mt-8'>고객지원 도우미 챗봇 Billie 🤖입니다.</p>
+                    <p className='mt-6'>무엇을 도와 드릴까요?</p>
                     <div className='relative'>
                         <input
                             placeholder='여기에 메시지를 입력하세요'
-                            className="border-t boder-black outline-none float-left w-full" />
+                            className='border-t outline-none float-left w-full py-2 mt-40' />
                         <svg
-                            className='w-5 h-5 absolute top-1 right-3'
+                            className='w-5 h-5 absolute bottom-3 right-3'
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512">
                             <path d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z" />
-                        </svg></div>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
