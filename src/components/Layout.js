@@ -7,7 +7,7 @@ export default function Layout() {
                 <Link to="/">
                     <img
                         className="m-4 w-24 h-26"
-                        src="/image/logo.png"
+                        src="https://github.com/parkheeyeun/IKEA/blob/master/public/image/logo.png?raw=true"
                         alt="logo"
                     />
                 </Link>
