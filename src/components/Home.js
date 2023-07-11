@@ -214,7 +214,7 @@ export default function Home() {
                 <h1 className="text-xl font-semibold">
                     진행중인 이벤트
                 </h1>
-                <div className="flex mt-8 h-[800px] overflow-auto overflow-y-hidden box-border px-2 py-2">
+                <div className="flex mt-8 h-[800px] overflow-auto overflow-y-hidden box-border px-2 py-3">
                     <div className="relative mr-4">
                         <img
                             className="max-w-[340px]"

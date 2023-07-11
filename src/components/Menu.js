@@ -19,7 +19,9 @@ export default function Menu() {
     function addCart(id, title, price, count, src) {
         const updateCart = [...cart, { id, title, price, count, src }]
         localStorage.setItem("cart", JSON.stringify(updateCart))
-        setCart(true)
+        setCart(updateCart)
+        setIncart(true)
+        alert('장바구니에 추가되었습니다!')
     }
 
     const [active, setActive] = useState(false)
@@ -51,6 +53,16 @@ export default function Menu() {
         </div>
     )
 
+    const [incart, setIncart] = useState(false)
+
+    useEffect(() =>{
+        cart.forEach(item => {
+            if(item.id == id){
+                setIncart(true)
+            }
+        })
+    },[])
+
     return (
         <>
             <div className="m-4 mt-8 w-2/3 m-auto flex">
@@ -61,8 +73,11 @@ export default function Menu() {
                     <p className="mt-2">상품평</p>
                     <StarCount />
                     <button
-                        className="bg-[#2360a5] w-24 h-10 py-2 px-4 text-white rounded-full mt-2"
-                        onClick={() => addCart(product.id, product.title, product.price, product.count, product.src)}>구매하기</button>
+                        className="disabled:opacity-20 bg-[#2360a5] w-24 h-10 py-2 px-4 text-white rounded-full mt-2"
+                        onClick={() => addCart(product.id, product.title, product.price, product.count, product.src)}
+                        disabled={incart}
+                    >구매하기</button>
+
                     <p className="mt-4">간편하고 스마트하죠! 기본 기능에 충실한 옷장이 필요할 때 사용하기 좋아요. 수납이 여전히 부족하다면 KLEPPSTAD 클렙스타드 시리즈의 다른 옷장을 추가해보세요.</p>
                     {active && modal}
                     <button
