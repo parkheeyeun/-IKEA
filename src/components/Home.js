@@ -325,7 +325,16 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="w-full h-20"></div>
+            <div className="w-full h-[300px] mt-4 bg-[#f2f2f2]">
+                <div className="flex flex-col p-4">
+                    <p className="font-semibold text-xl">IKEA 코리아</p>
+                    <p className="mt-2 text-sm">주소 : (우) 14352 경기도 광명시 일직로 17 IKEA광명점</p>
+                    <p className="mt-2 text-sm">사업자 등록번호 : 106-86-82871</p>
+                    <p className="mt-2 text-sm">대표자 : 프레드릭 요한손</p>
+                    <p className="mt-2 text-sm">통신판매업 신고 : 2018-경기광명-0209</p>
+                    <p className="mt-2 text-sm">TEL : 1670-4532</p>
+                </div>
+            </div>
         </>
     )
 }
