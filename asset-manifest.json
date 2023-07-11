@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/IKEA/static/css/main.854a18df.css",
-    "main.js": "/IKEA/static/js/main.a56eb265.js",
+    "main.js": "/IKEA/static/js/main.715dcb8f.js",
     "static/js/787.1239e482.chunk.js": "/IKEA/static/js/787.1239e482.chunk.js",
     "index.html": "/IKEA/index.html",
     "main.854a18df.css.map": "/IKEA/static/css/main.854a18df.css.map",
-    "main.a56eb265.js.map": "/IKEA/static/js/main.a56eb265.js.map",
+    "main.715dcb8f.js.map": "/IKEA/static/js/main.715dcb8f.js.map",
     "787.1239e482.chunk.js.map": "/IKEA/static/js/787.1239e482.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.854a18df.css",
-    "static/js/main.a56eb265.js"
+    "static/js/main.715dcb8f.js"
   ]
 }
