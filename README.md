@@ -1,6 +1,6 @@
 <h1>IKEA 클론코딩🌈</h1>
 <p>앱버전을 만들것인데 웹에서도 볼수있도록 만들어볼려고 한다.</p>
 <h2>1단계: 구상하기</h2>
-<img src="https://github.com/parkheeyeun/IKEA/assets/131850100/d1b49c1b-ed2b-4237-ba1d-6e1a7197846f" width="180">
+<img src="https://github.com/parkheeyeun/IKEA/assets/131850100/d1b49c1b-ed2b-4237-ba1d-6e1a7197846f" width="230">
 
 <p>민망한 수준이지만 figma로 일단 어떻게 만들것인지 구상을 해보았다... 총 5개의 탭정도를 만들어보려고 생각했었다. 홈, 검색, 카테고리, 계정, 장바구니탭을 만들어보려 구상했다.</p>
